@@ -17,8 +17,7 @@ function generateUniquePin(existingPins) {
   // if not unique keep looping
   while (!checkIfUnique(newPin, existingPins)) {
     newPin =
-      generateRandomPin().indexOf(String(b)) === -1 &&
-      numbersRev.indexOf(String(b)) === -1;
+      generateRandomPin();
     i++;
     if (i > 1000) {
       return "error we could not generate Pin";
